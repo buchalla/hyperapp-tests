@@ -1,6 +1,9 @@
 import { getCurrentState, getCurrentActions } from './storage';
 
-const connect = (mapStateToProps, mapActions) => {
+const connect = (
+  mapStateToProps = () => ({}),
+  mapActions = () => ({})
+) => {
   return (component) => {
     return (props, children) => {
       let componentProps = mapStateToProps(getCurrentState());

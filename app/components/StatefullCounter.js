@@ -1,5 +1,5 @@
 import { h } from 'hyperapp';
-import statefull from '../statefull/component';
+import statefull from '../tools/component';
 
 const StatefullCounter  = statefull({
   actions: {

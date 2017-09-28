@@ -29,7 +29,7 @@ const statefull = (component) => {
       };
       return prev;
     }, {});
-
+    
     return component.view(state, actions, children);
   }
 }
