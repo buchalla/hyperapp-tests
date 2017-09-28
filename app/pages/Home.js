@@ -1,16 +1,19 @@
 import { h } from 'hyperapp';
 import Counter from '../components/Counter';
 import StatefullCounter from '../components/StatefullCounter';
+import ContainerCounter from '../containers/ContainerCounter';
 
 const Home = ({ state, actions }) => (
   <div>
     <h1>
       Hellcome to home.
     </h1>
+    <ContainerCounter  />
+    <br />
+    <br />
     <br />
     <Counter state={state} actions={actions} />
     <br />
-    <Counter state={state} actions={actions} />
     <hr />
     <br />
     <StatefullCounter key="statefull_counter" />
