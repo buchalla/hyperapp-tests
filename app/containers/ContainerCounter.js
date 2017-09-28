@@ -8,6 +8,7 @@ const ContainerCounter = (props) => {
       <br />
       <button onclick={props.incrementCounter}> incrementCounter global </button>
       <button onclick={props.decrementCounter}> decrementCounter global </button>
+      <button onclick={props.changeName}>Change name</button>
     </div>
   )
 };
@@ -16,10 +17,11 @@ const connector = connect(
   ({ _statefull }) => ({
     fabeniCounter: _statefull.statefull_counter_do_fabeni
   }),
-  ({ incrementCounter, decrementCounter }) => {
+  ({ incrementCounter, decrementCounter, changeName }) => {
     return ({
       incrementCounter,
-      decrementCounter
+      decrementCounter,
+      changeName
     })
   }
 );

@@ -1,7 +1,6 @@
 import { router, Link } from '@hyperapp/router';
 import devtools from 'hyperapp-redux-devtools';
 import { app, h } from 'hyperapp';
-// import statefull from './statefull';
 import mixin from './statefull/mixin';
 import ducks from './ducks';
 import Home from './pages/Home';
