@@ -3,24 +3,10 @@ import devtools from 'hyperapp-redux-devtools';
 import { app, h } from 'hyperapp';
 import mixin from './tools/mixin';
 import ducks from './ducks';
-import Home from './pages/Home';
-import Counter from './components/Counter';
-
+import routes from './routes';
 app({
   ...ducks,
   mixins: [devtools(), mixin, router()],
   root: document.getElementById("app"),
-  view: [
-    [
-      "/",
-      (state, actions) => <Home state={state} actions={actions}/>,
-    ],
-    [
-      "*",
-      () => (
-        <div>
-          PAGE 404
-        </div>
-    )]
-  ]
+  view: routes
 });
